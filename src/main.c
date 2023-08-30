@@ -2,7 +2,7 @@
 
 #include "Subsystems/Chassis.h"
 #include "Subsystems/Intake.h"
-#include "BrainUI.h"
+#include "UI/BrainUI.h"
 
 #include <stdbool.h>
 
@@ -29,7 +29,9 @@ void opcontrol()
 		// Update Telemetry / Configuration Tools
 		updateBrainUI();
 		
-		// ensure program doesn't overwork v5 brain
+		// ensures program doesn't overwork v5 brain
 		delay(LOOP_DELAY);		
 	}
+	
+	freeBrainUI();
 }

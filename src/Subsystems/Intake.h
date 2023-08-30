@@ -1,6 +1,6 @@
 #pragma once
 
-#define INTAKE_MOTOR_PORT 15
+#define INTAKE_MOTOR_PORT 6
 
 void initializeIntake();
 void updateIntake();

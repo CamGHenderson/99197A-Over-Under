@@ -2,3 +2,4 @@
 
 void initializeBrainUI();
 void updateBrainUI();
+void freeBrainUI();
