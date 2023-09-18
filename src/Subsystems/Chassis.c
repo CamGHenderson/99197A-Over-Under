@@ -5,20 +5,31 @@
 #include "../Motor.h"
 #include <stdlib.h>
 
+#define TEAM_CONFIG 1
+
 Motor leftMotors[DRIVE_ASSEMBLY_MOTOR_COUNT];
 Motor rightMotors[DRIVE_ASSEMBLY_MOTOR_COUNT];
 
 void initializeChassis()
 {
-	leftMotors[0] = initializeMotor(1, BLUE_GEARBOX, false);
-	leftMotors[1] = initializeMotor(2, BLUE_GEARBOX, true);
-	leftMotors[2] = initializeMotor(3, BLUE_GEARBOX, true);
-	
-	rightMotors[0] = initializeMotor(8, BLUE_GEARBOX, true);
-	rightMotors[1] = initializeMotor(9, BLUE_GEARBOX, false);
-	rightMotors[2] = initializeMotor(10, BLUE_GEARBOX, false);
+
+	if(TEAM_CONFIG == 1)
+	{
+		rightMotors[0] = initializeMotor(1, BLUE_GEARBOX, false);
+		rightMotors[1] = initializeMotor(2, BLUE_GEARBOX, true);
+		rightMotors[2] = initializeMotor(3, BLUE_GEARBOX, true);
+		
+		leftMotors[0] = initializeMotor(7, BLUE_GEARBOX, true);
+		leftMotors[1] = initializeMotor(8, BLUE_GEARBOX, false);
+		leftMotors[2] = initializeMotor(9, BLUE_GEARBOX, false);
+	}
+	else if(TEAM_CONFIG == 2)
+	{
+		
+	}
 }
 
+// TODO make chassis control external to allow for autonomous control
 void updateChassis()
 {
 	uint8_t leftInput = (uint8_t)controller_get_analog(E_CONTROLLER_MASTER, E_CONTROLLER_ANALOG_LEFT_Y);

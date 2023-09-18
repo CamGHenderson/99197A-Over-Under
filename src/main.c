@@ -2,6 +2,7 @@
 
 #include "Subsystems/Chassis.h"
 #include "Subsystems/Intake.h"
+#include "Subsystems/Catapult.h"
 #include "UI/BrainUI.h"
 
 #include <stdbool.h>
@@ -13,6 +14,7 @@ void initialize()
 	// Initialize Subsystems
 	initializeChassis();
 	initializeIntake();
+	initializeCatapult();
 	
 	// Initialize Telemetry / Configuration Tools
 	initializeBrainUI();
@@ -25,6 +27,7 @@ void opcontrol()
 		// Update Subsystems
     	updateChassis();
 		updateIntake();
+		updateCatapult();
 		
 		// Update Telemetry / Configuration Tools
 		updateBrainUI();

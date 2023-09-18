@@ -2,9 +2,11 @@
 
 #include "api.h"
 
+#define INTAKE_MOTOR_PORT 6
+
 void initializeIntake()
 {
-	motor_set_brake_mode(INTAKE_MOTOR_PORT, E_MOTOR_BRAKE_HOLD);
+	motor_set_brake_mode(INTAKE_MOTOR_PORT, E_MOTOR_BRAKE_COAST);
 }
 
 void updateIntake()
