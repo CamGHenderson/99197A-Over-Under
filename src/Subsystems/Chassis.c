@@ -5,7 +5,7 @@
 #include "../Motor.h"
 #include <stdlib.h>
 
-#define TEAM_CONFIG 1
+#define TEAM_CONFIG 2
 
 Motor leftMotors[DRIVE_ASSEMBLY_MOTOR_COUNT];
 Motor rightMotors[DRIVE_ASSEMBLY_MOTOR_COUNT];
@@ -23,9 +23,15 @@ void initializeChassis()
 		leftMotors[1] = initializeMotor(8, BLUE_GEARBOX, false);
 		leftMotors[2] = initializeMotor(9, BLUE_GEARBOX, false);
 	}
-	else if(TEAM_CONFIG == 2)
+	else if(TEAM_CONFIG == 2) //The motor config for 99197T
 	{
+		rightMotors[0] = initializeMotor(1, GREEN_GEARBOX, true);
+		rightMotors[1] = initializeMotor(2, GREEN_GEARBOX, false);
+		rightMotors[2] = initializeMotor(3, GREEN_GEARBOX, true);
 		
+		leftMotors[0] = initializeMotor(7, GREEN_GEARBOX, false);
+		leftMotors[1] = initializeMotor(8, GREEN_GEARBOX, true);
+		leftMotors[2] = initializeMotor(9, GREEN_GEARBOX, false);
 	}
 }
 
