@@ -12,7 +12,6 @@ Motor rightMotors[DRIVE_ASSEMBLY_MOTOR_COUNT];
 
 void initializeChassis()
 {
-
 	if(TEAM_CONFIG == 1)
 	{
 		rightMotors[0] = initializeMotor(1, BLUE_GEARBOX, false);

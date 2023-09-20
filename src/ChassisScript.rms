@@ -1,0 +1,11 @@
+
+{
+	Component: Chassis
+
+	Type: TankDrive
+	
+	LeftMotors: 10b -5b 9b
+	RightMotors: 4b -6b 8b
+}
+
+
