@@ -17,5 +17,12 @@ typedef struct
 	bool reversed;
 } Motor;
 
+typedef struct
+{
+	Motor* motors;
+	uint16_t count;
+} MotorGroup;
+
 Motor initializeMotor(uint8_t port, MotorGearbox gearbox, bool reversed);
+MotorGroup initializeMotorGroup(uint16_t count);
 void driveMotors(Motor* motors, uint8_t count, int8_t speed);

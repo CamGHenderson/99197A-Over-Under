@@ -1,0 +1,23 @@
+{
+	ComponentType: RobotDetails
+	
+	TeamNumber: 99197
+	TeamLetter: A
+	TeamName: Poor_Design_Choices_Causing_Problems
+	RobotName: Bowbot
+}
+
+
+{
+	ComponentType: Chassis
+	
+	DriveMotorCount: 6
+	LeftMotors: +8b +9b +10b
+	RightMotors: -1b +2b +3b
+}
+
+{
+	ComponentType: Subsystem
+	
+	Tag: Catapult
+}
